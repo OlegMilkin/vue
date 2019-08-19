@@ -22,13 +22,10 @@
                     <a class="nav-link active" href="edit.html">Edit</a>
                 </li>
             </ul>
-            <div class="alert alert-primary" role="alert">
-                We have {{ computedArrLength }} users.
-            </div>
-            <user-form :user="user"></user-form>
+            <user-form :user="users[0]"></user-form>
         </div>
     </div>
 <script src="vendor/vue.js"></script>
-<script src="app-edit.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
