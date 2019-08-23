@@ -19,7 +19,7 @@ export default new Router({
       component: Users
     },
     {
-      path: "/edit",
+      path: "/edit/:id",
       name: "edit",
       component: Edit
     }
