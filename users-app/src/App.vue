@@ -11,8 +11,8 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/users">Users</router-link>
           </li>
-          <li class="nav-item active">
-            <router-link class="nav-link" to="/edit">Edit</router-link>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/create">Create</router-link>
           </li>
         </ul>
       </div>

@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "@/views/Home.vue"
 import Users from "@/views/Users.vue";
 import Edit from "@/views/Edit.vue";
+import Create from "@/views/Create.vue";
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: "/edit/:id",
       name: "edit",
       component: Edit
+    },
+    {
+      path: "/create",
+      name: "create",
+      component: Create
     }
   ]
 });
