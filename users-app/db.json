@@ -1,34 +1,40 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Gadia",
       "surname": "Hrenova",
       "patronymic": "Petrovich"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Igor2",
       "surname": "Pechkin",
       "patronymic": "Ivanovic"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Arnold",
       "surname": "Schwarzenegger",
       "patronymic": "Alois"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Elon",
       "surname": "Musk",
       "patronymic": "Reeve"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Warren",
       "surname": "Buffett",
       "patronymic": "Edward"
+    },
+    {
+      "id": 6,
+      "name": "jhkj",
+      "surname": "hghg",
+      "patronymic": "jjhkj"
     }
   ]
 }

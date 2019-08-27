@@ -24,7 +24,7 @@ export default {
     methods: {
         create(){
             axios.post("http://localhost:3000/users/", {
-                id: null,
+                id: 0,
                 name:  this.user.name,
                 surname: this.user.surname,
                 patronymic: this.user.patronymic
