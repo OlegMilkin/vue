@@ -23,24 +23,6 @@
       "name": "Elon",
       "surname": "Musk",
       "patronymic": "Reeve"
-    },
-    {
-      "id": 5,
-      "name": "Warren",
-      "surname": "Buffett",
-      "patronymic": "Edward"
-    },
-    {
-      "id": 6,
-      "name": "Oleg",
-      "surname": "Milkin",
-      "patronymic": "Valeriyovich"
-    },
-    {
-      "id": 7,
-      "name": "sdf",
-      "surname": "wer",
-      "patronymic": "sdf"
     }
   ]
 }

@@ -6,6 +6,7 @@
             <th scope="col">Name</th>
             <th scope="col">Surname</th>
             <th scope="col">Patronymic</th>
+            <th scope="col">&nbsp;</th>
         </tr>
         </thead>
         <tbody>
@@ -18,6 +19,9 @@
             <td>{{ user.name }}</td>
             <td>{{ user.surname }}</td>
             <td>{{ user.patronymic }}</td>
+            <td>
+                <button type="button" class="btn btn-primary float-right" v-on:click="$emit('removeUser', user.id)">Remove</button>
+            </td>
         </tr>
         </tbody>
     </table>
