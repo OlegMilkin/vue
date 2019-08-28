@@ -3,7 +3,7 @@ import Router from "vue-router";
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: "/",
@@ -13,7 +13,8 @@ export default new Router({
     {
       path: "/users",
       name: "users",
-      component: () => import('@/views/Users.vue')
+      component: () => import('@/views/Users.vue'),
+      meta: { requiresAuth: true }
     },
     {
       path: "/edit/:id",
@@ -27,3 +28,25 @@ export default new Router({
     }
   ]
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    // этот путь требует авторизации, проверяем залогинен ли
+    // пользователь, и если нет, перенаправляем на страницу логина
+
+    const test = '123';
+
+    if (test !== '123') {
+      next({
+        path: '/login',
+        query: { redirect: to.fullPath }
+      })
+    } else {
+      next()
+    }
+  } else {
+    next() // всегда так или иначе нужно вызвать next()!
+  }
+});
+
+export default router;

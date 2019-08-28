@@ -26,7 +26,15 @@
     },
     methods: {
       loadData: function() {
-        axios.get("http://localhost:3000/users/")
+        const token = '1234567890';
+
+        const config = {
+            headers: {
+                Autorization: `Bearer ${token}`
+            }
+        }
+
+        axios.get("http://localhost:3000/users/", config)
                 .then(response => response.data)
                 .then(response => (this.users = response))
                 .catch(error => console.error(error))
