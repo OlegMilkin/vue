@@ -3,7 +3,7 @@
       <h2>
             Create Page
       </h2>
-      <user-form  @update="user = $event"></user-form>
+      <user-form v-model="user"></user-form>
 
       <button type="button" class="btn btn-primary" @click="create">Create</button>
   </div>
@@ -11,7 +11,6 @@
 
 <script>
 import axios from 'axios';
-import UserForm from '@/components/UserForm'
 
 export default {
     name: "CreateUserPage",
@@ -19,7 +18,7 @@ export default {
         user: null
     }),
     components: {
-      "user-form": UserForm
+      "user-form": () => import('@/components/UserForm')
     },
     methods: {
         create(){

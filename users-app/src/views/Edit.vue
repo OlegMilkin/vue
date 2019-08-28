@@ -4,13 +4,13 @@
         <div v-if="!user">
             Loading...
         </div>
-        <user-form :user="user" v-else @update="user = $event"></user-form>
+        <user-form :user="user" v-else v-model="user"></user-form>
 
         <button type="submit" class="btn btn-primary" @click="save">Save</button>
 
-        <!--<pre>-->
-            <!--USER {{ user }}-->
-        <!--</pre>-->
+        <pre>
+            USER {{ user }}
+        </pre>
   </div>
 </template>
 

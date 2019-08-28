@@ -13,13 +13,17 @@
             <input type="text" class="form-control" id="test3" placeholder="Enter patronymic" v-model="localUser.patronymic">
         </div>
 
-        <!--<pre>Local user {{ localUser }}</pre>-->
+        <pre>Local user {{ localUser }}</pre>
     </form>
 </template>
 
 <script>
     export default {
         name: 'UserForm',
+        model: {
+          prop: 'user',
+          event: 'update'
+        },
         props: {
             user: {
                 type: Object,
