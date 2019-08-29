@@ -13,16 +13,16 @@
 import axios from 'axios';
 
 export default {
-    name: "CreateUserPage",
+    name: 'CreateUserPage',
     data: () => ({
-        user: null
+        user: {}
     }),
     components: {
-      "user-form": () => import('@/components/UserForm')
+      'user-form': () => import('@/components/UserForm')
     },
     methods: {
         create(){
-            axios.post("http://localhost:3000/users/", {
+            axios.post('http://localhost:3000/users/', {
                 id: 0,
                 name:  this.user.name,
                 surname: this.user.surname,

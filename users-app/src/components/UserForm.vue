@@ -26,8 +26,7 @@
         },
         props: {
             user: {
-                type: Object,
-                require: true
+                type: Object
             }
         },
         data: () => ({
@@ -36,15 +35,15 @@
         }),
         watch: {
             //Нужно если мы хотим отслеживать оюновляется ли user в родительском компоненте
-            // user: {
-            //     deep: true,
-            //     handler() {
-            //         if(deepEqual(this.user, this.localUser)) {
-            //             return
-            //         }
-            //         this.localUser = Object.assign({}, this.user);
-            //     }
-            // },
+            user: {
+                deep: true,
+                handler() {
+                    if(deepEqual(this.user, this.localUser)) {
+                        return
+                    }
+                    this.localUser = Object.assign({}, this.user);
+                }
+            },
             localUser: {
                 deep: true,
                 handler() {

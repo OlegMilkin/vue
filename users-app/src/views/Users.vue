@@ -4,7 +4,7 @@
       <div v-if="!users.length" class="alert alert-warning">
         Загрузка...
       </div>
-      <component-users v-else :users="users" :key="users.id" v-on:removeUser="removeUser"></component-users>
+      <component-users v-else :users="users" @:removeUser="removeUser"></component-users>
     </div>
 </template>
 
@@ -34,13 +34,13 @@
             }
         }
 
-        axios.get("http://localhost:3000/users/", config)
+        axios.get('http://localhost:3000/users/', config)
                 .then(response => response.data)
                 .then(response => (this.users = response))
                 .catch(error => console.error(error))
       },
       removeUser(id) {
-          axios.delete("http://localhost:3000/users/" + id)
+          axios.delete('http://localhost:3000/users/' + id)
           .catch(error => console.error(error))
           this.loadData();
       }

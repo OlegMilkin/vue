@@ -4,9 +4,9 @@
         <div v-if="!user">
             Loading...
         </div>
-        <user-form :user="user" v-else v-model="user"></user-form>
+        <user-form v-else v-model="user"></user-form>
 
-        <button type="submit" class="btn btn-primary" @click="save">Save</button>
+        <button type="button" class="btn btn-primary" @click="save">Save</button>
 
         <pre>
             USER {{ user }}
@@ -16,12 +16,12 @@
 
 <script>
   import axios from 'axios';
-  import UserForm from '@/components/UserForm'
+  import UserForm from '@/components/UserForm.vue'
 
   export default {
     name: 'EditUserPage',
     components: {
-      "user-form": UserForm
+      'user-form': UserForm
     },
     data: () => ({
         user: null
@@ -31,7 +31,7 @@
             return this.$route.params.id;
         },
         url() {
-            return "http://localhost:3000/users/" + this.id;
+            return 'http://localhost:3000/users/' + this.id;
         }
     },
     mounted() {

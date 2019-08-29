@@ -20,7 +20,7 @@
             <td>{{ user.surname }}</td>
             <td>{{ user.patronymic }}</td>
             <td>
-                <button type="button" class="btn btn-primary float-right" v-on:click="$emit('removeUser', user.id)">Remove</button>
+                <button type="button" class="btn btn-primary float-right" @:click="$emit('removeUser', user.id)">Remove</button>
             </td>
         </tr>
         </tbody>

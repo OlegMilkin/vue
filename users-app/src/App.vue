@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-cloak>
+  <div id="app">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <router-link class="navbar-brand" to="/"><img alt="Vue logo" src="@/assets/logo.png" width="30" /></router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">

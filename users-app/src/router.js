@@ -1,29 +1,29 @@
-import Vue from "vue";
-import Router from "vue-router";
+import Vue from 'vue';
+import Router from 'vue-router';
 
 Vue.use(Router);
 
 const router = new Router({
   routes: [
     {
-      path: "/",
-      name: "home",
+      path: '/',
+      name: 'home',
       component: () => import('@/views/Home.vue')
     },
     {
-      path: "/users",
-      name: "users",
+      path: '/users',
+      name: 'users',
       component: () => import('@/views/Users.vue'),
       meta: { requiresAuth: true }
     },
     {
-      path: "/edit/:id",
-      name: "edit",
+      path: '/edit/:id',
+      name: 'edit',
       component: () => import('@/views/Edit.vue')
     },
     {
-      path: "/create",
-      name: "create",
+      path: '/create',
+      name: 'create',
       component: () => import('@/views/Create.vue')
     }
   ]

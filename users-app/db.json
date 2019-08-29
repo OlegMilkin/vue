@@ -1,28 +1,16 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Gadia",
-      "surname": "Hrenova",
-      "patronymic": "Petrovich"
-    },
-    {
-      "id": 2,
-      "name": "Igor2",
-      "surname": "Pechkin",
-      "patronymic": "Ivanovic"
-    },
-    {
       "id": 3,
-      "name": "Arnold",
-      "surname": "Schwarzenegger",
-      "patronymic": "Alois"
+      "name": "авпвар",
+      "surname": "апрапр",
+      "patronymic": "апрапр"
     },
     {
       "id": 4,
-      "name": "Elon",
-      "surname": "Musk",
-      "patronymic": "Reeve"
+      "name": "рлнгл",
+      "surname": "митмит",
+      "patronymic": "пропро"
     }
   ]
 }
