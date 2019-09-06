@@ -1,11 +1,12 @@
 <template>
-    <div>
-      <h2>Список пользователей</h2>
-      <div v-if="!users.length" class="alert alert-warning">
-        Загрузка...
-      </div>
-      <component-users v-else :users="users" @:removeUser="removeUser"></component-users>
+<div>
+    <h2>Список пользователей</h2>
+    <user-show-dropdown v-model="selected"></user-show-dropdown>
+    <div v-if="!users.length" class="alert alert-warning">
+      Загрузка...
     </div>
+    <component-users v-else :users="users" v-on:removeUser="removeUser"></component-users>
+</div>
 </template>
 
 <script>
@@ -14,11 +15,13 @@
   export default {
     name: 'UsersPage',
     components: {
-      'component-users': () => import('@/components/ComponentUsers.vue')
+      'component-users': () => import('@/components/ComponentUsers.vue'),
+      'user-show-dropdown': () => import('@/components/UserShowDropdown.vue')
     },
     data: function(){
       return {
-        users: []
+        users: [],
+        selected: 5
       }
     },
     mounted: function() {
