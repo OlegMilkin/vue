@@ -33,6 +33,7 @@
         url() {
             return 'http://localhost:3000/users/' + this.id;
         }
+        
     },
     mounted() {
         this.loadData()

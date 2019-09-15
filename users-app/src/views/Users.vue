@@ -5,7 +5,7 @@
     <div v-if="!users.length" class="alert alert-warning">
       Загрузка...
     </div>
-    <component-users v-else :users="users" v-on:removeUser="removeUser"></component-users>
+    <component-users v-else :users="users" :visible="selected" v-on:removeUser="removeUser"></component-users>
 </div>
 </template>
 

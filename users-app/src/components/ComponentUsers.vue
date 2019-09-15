@@ -10,7 +10,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="user in users" :key="user.id">
+        <tr v-for="user in newUsers" :key="user.id">
             <td>
                 <router-link :to="'/edit/' + user.id">
                     {{ user.id }}
@@ -34,11 +34,16 @@ export default {
         users: {
             type: Array,
             required: true
-        }
+        },
+        visible: Number
     },
     computed: {
         total: function(){
             return this.users.length
+        },
+        newUsers: function() {
+            return this.users.slice(1,this.visible + 1)
+            //return this.users
         }
     }
 }
